@@ -1,10 +1,11 @@
-import * as React from 'react';
+import * as React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import Players from './Components/Players';
-import Teams from './Components/Teams';
-import TopScorers from './Components/Statistics';
-import Table from './Components/Table';
-import Home from './Components/Home';
+import Players from "./Components/Players";
+import Teams from "./Components/Teams";
+import TopScorers from "./Components/Statistics";
+import Table from "./Components/Table";
+import Home from "./Components/Home";
+import Fixtures from "./Components/Fixtures";
 
 function App() {
   return (
@@ -18,15 +19,17 @@ function App() {
               <Link to="/players">Players</Link>
               <Link to="/statistics">Statistics</Link>
               <Link to="/table">Table</Link>
+              <Link to="/fixtures">Fixtures</Link>
             </nav>
           </top>
         </div>
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/teams" component={Teams}/>
-          <Route path="/players" component={Players}/>
-          <Route path="/statistics" component={TopScorers}/>
-          <Route path="/table" component={Table}/>
+          <Route exact path="/" component={Home} />
+          <Route path="/teams" component={Teams} />
+          <Route path="/players" component={Players} />
+          <Route path="/statistics" component={TopScorers} />
+          <Route path="/table" component={Table} />
+          <Route path="/fixtures" component={Fixtures} />
         </Switch>
       </Router>
     </div>
